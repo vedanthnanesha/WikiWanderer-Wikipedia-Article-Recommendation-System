@@ -60,4 +60,5 @@ function fetchSimilarArticles() {
   });
 }
 
+
 fetchSimilarArticles();
