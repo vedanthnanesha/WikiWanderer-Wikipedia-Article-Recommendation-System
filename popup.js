@@ -1,10 +1,16 @@
+function decodeHTMLEntities(text) {
+  
+  const tempElement = document.createElement("div");
+  tempElement.innerHTML = text;
+  return tempElement.textContent || tempElement.innerText;
+}
+
 function fetchSimilarArticles() {
   chrome.tabs.query({ active: true, currentWindow: true }, function(tabs) {
     let currentUrl = tabs[0].url;
     let title = currentUrl.split("/").pop().replace(/_/g, " ");
 
-    // Make a request to Wikipedia's API to search for articles similar to the current article
-    fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&format=json&srsearch=${encodeURIComponent(title)}`)
+    fetch(`https://en.wikipedia.org/api/rest_v1/page/related/${encodeURIComponent(title)}`)
       .then(response => {
         if (!response.ok) {
           throw new Error('Network response was not ok');
@@ -12,17 +18,21 @@ function fetchSimilarArticles() {
         return response.json();
       })
       .then(data => {
-        console.log("API response:", data); // Log API response to console for debugging
+        console.log("API response:", data); 
 
-        // Extract the list of similar articles from the API response
         let similarArticles = [];
-        if (data.query && data.query.search) {
-          similarArticles = data.query.search.map(result => result.title);
+        if (data && data.pages) {
+          similarArticles = data.pages.map(page => {
+          
+            const decodedTitle = decodeHTMLEntities(page.titles.display);
+           
+            return decodedTitle.replace(/<[^>]*>/g, "");
+          });
         }
 
-        // Update the popup UI with the list of similar articles
+        
         let ul = document.getElementById("similarArticles");
-        ul.innerHTML = ""; // Clear previous content
+        ul.innerHTML = ""; 
         if (similarArticles.length === 0) {
           let li = document.createElement("li");
           li.textContent = "No similar articles found.";
@@ -33,7 +43,7 @@ function fetchSimilarArticles() {
             let link = document.createElement("a");
             link.textContent = article;
             link.href = `https://en.wikipedia.org/wiki/${encodeURIComponent(article.replace(/ /g, "_"))}`;
-            link.target = "_blank"; // Open link in a new tab
+            link.target = "_blank"; 
             li.appendChild(link);
             ul.appendChild(li);
           });
@@ -50,5 +60,4 @@ function fetchSimilarArticles() {
   });
 }
 
-// Fetch similar articles when the popup is opened
 fetchSimilarArticles();
