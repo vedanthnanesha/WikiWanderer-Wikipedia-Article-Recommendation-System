@@ -154,8 +154,17 @@ function fetchArticleInfoAndSendToServer() {
       const title = decodeURIComponent(currentUrl.split("/").pop().replace(/_/g, " ")); 
       console.log("Title:", title);
 
-      const time = new Date().toISOString();
+      function getISTTime() {
+        const now = new Date();
+        const istOffset = 5.5 * 60 * 60 * 1000; // IST offset in milliseconds
+        const istTime = new Date(now.getTime() + istOffset);
+      
+        return istTime.toISOString();
+      }
+      
+      const time = getISTTime();
       console.log("Time:", time);
+      
 
       var url = "https://en.wikipedia.org/w/api.php";
 

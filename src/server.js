@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const { db,auth } = require('./firebase'); 
-const { collection, addDoc } = require("firebase/firestore"); 
+const { addDoc, collection} = require("firebase/firestore"); 
 const { fetchSignInMethodsForEmail } = require('firebase/auth');
 
 const app = express();
@@ -36,38 +36,39 @@ app.post('/check-email', (req, res) => {
 app.post('/store-article', async (req, res) => {
   const { title, articleURL, time, user, categories } = req.body;
 
-  // Convert to strings
+  const useremail = user ? user.toString() : null;
   const titleStr = title ? title.toString() : null;
   const articleURLStr = articleURL ? articleURL.toString() : null;
   const timeStr = time ? time.toString() : null;
-  const userStr = user ? user.toString() : null;
-
-  // Convert categories to an array of strings
-  
 
   console.log("sent Title:", titleStr);
   console.log("sent article:", articleURLStr);
   console.log("sent time:", timeStr);
-  console.log("sent user:", userStr);
+  console.log("sent user:", user);
   console.log("sent cate:", categories);
 
   try {
-    const docRef = await addDoc(collection(db, "wikipediaarticles"), { 
+    // Reference to the user's subcollection within wikipediaarticles
+    const userSubcollectionRef = collection(db, `wikipediaarticles/users/${useremail}`);
+
+
+    // Data to be added to the subcollection
+    const subcollectionData = {
       Title: titleStr,
       URL: articleURLStr,
       Time: timeStr,
-      User: userStr,
       Categories: categories,
-    });
-    console.log("Document written with ID: ", docRef.id);
+    };
+
+    // Add the data to the user's subcollection, letting Firestore generate a unique ID
+    await addDoc(userSubcollectionRef, subcollectionData);
+    console.log("Document written in subcollection");
     res.json({ success: true });
   } catch (error) {
     console.error("Error adding document: ", error);
     res.status(500).json({ success: false, error: "Failed to store article" });
   }
 });
-
-
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
