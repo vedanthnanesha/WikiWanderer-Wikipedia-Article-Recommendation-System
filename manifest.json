@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Wikipedia Similar Articles",
+  "name": "WikiWanderer:A Wikipedia Article Recommendation System",
   "description": "Find similar articles on Wikipedia",
   "version": "1.0",
   "permissions": [
