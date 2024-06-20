@@ -48,11 +48,11 @@ app.post('/store-article', async (req, res) => {
   console.log("sent cate:", categories);
 
   try {
-    // Reference to the user's subcollection within wikipediaarticles
+    
     const userSubcollectionRef = collection(db, `wikipediaarticles/users/${useremail}`);
 
 
-    // Data to be added to the subcollection
+    
     const subcollectionData = {
       Title: titleStr,
       URL: articleURLStr,
@@ -60,7 +60,7 @@ app.post('/store-article', async (req, res) => {
       Categories: categories,
     };
 
-    // Add the data to the user's subcollection, letting Firestore generate a unique ID
+    
     await addDoc(userSubcollectionRef, subcollectionData);
     console.log("Document written in subcollection");
     res.json({ success: true });

@@ -1,0 +1,136 @@
+body {
+    background-color: #171717;
+    color: #fff; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-bar {
+    background-color: #424242;
+    color: #707070; 
+    padding: 15px;
+    border-bottom: 1px solid #333; 
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.nav-bar li.title-left {
+    margin-right: 770px; 
+}
+
+.nav-bar li {
+    float: left;
+    margin-right: 20px;
+}
+
+.nav-bar li a {
+    color: #707070; 
+    text-decoration: none; 
+    padding: 10px 16px;
+}
+
+.nav-bar li a:hover {
+   
+    color: #e5f4ef;
+}
+
+.nav-bar li.active {
+    background-color: #04AA6D; /* Green color */
+    color: #fff; /* White text color */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+    padding: 10px 5px;
+    background-color: #212121; 
+    border-bottom: 1px solid #333;
+    background-image: url('../../assets/header1.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+
+.titlehome {
+    color: #171717; 
+    font-size: 2.5rem;
+    font-weight: bold; 
+    font-family: 'Montserrat', sans-serif;
+}
+
+.welcome-message {
+    color: #171717; 
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.split-screen {
+    display: flex;
+  }
+  
+.left-column {
+    flex: 3; 
+    padding-right: 20px; 
+
+}
+
+.right-column {
+    flex: 3; 
+    padding-left: 20px; 
+    
+}
+.error-message {
+    color: #ff0000;
+    font-size: 1.2rem;
+}
+
+.section-title1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #00afbf; 
+    text-align: center; 
+    font-family: 'Raleway', sans-serif; 
+}
+
+.article-list {
+    padding: 0;
+    margin-bottom: 20px;
+    width: 50%;
+    margin: 0 auto; 
+    list-style: none;
+    color: #fff;
+}
+
+.article-item {
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.article-title a {
+    color: #fff;
+    text-decoration: none; 
+}
+
+.article-title a:hover {
+    color: #fff;
+}
+
+.article-list li {
+    border-bottom: none;
+    color: #fff;
+}
+
+.article-list li:last-child {
+    border-bottom: none;
+}

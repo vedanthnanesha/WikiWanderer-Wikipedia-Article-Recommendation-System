@@ -1,5 +1,3 @@
-// Import the functions you need from the SDKs you need
-
 const { initializeApp } = require("firebase/app");
 
 const { getAuth } = require("firebase/auth"); 
@@ -15,7 +13,7 @@ const firebaseConfig = {
   measurementId: "G-S5KTBQG80P"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
 const auth = getAuth(app); 

@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { signInWithEmailAndPassword, createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from './firebase';
-import './LoginPage.css'; // Import CSS file for styling
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
+import { useNavigate, Link } from 'react-router-dom'; 
+import './LoginPage.css'; 
 
 export default function LoginPage() {
+    const navigate = useNavigate(); 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [errorMessage, setErrorMessage] = useState('');
@@ -11,18 +13,9 @@ export default function LoginPage() {
     const handleLogin = async () => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
-            // User authenticated successfully
+            navigate('/home'); 
         } catch (error) {
-            setErrorMessage(error.message);
-        }
-    };
-
-    const handleSignUp = async () => {
-        try {
-            await createUserWithEmailAndPassword(auth, email, password);
-            // User signed up successfully
-        } catch (error) {
-            setErrorMessage(error.message);
+            setErrorMessage("Invalid Email or Password, Please Try Again");
         }
     };
 
@@ -35,13 +28,13 @@ export default function LoginPage() {
     return (
         <section className="login-container">
             <div className="login-header">
-                <h1>Welcome back!</h1>
+                <h1>Welcome back to WikiWanderer!</h1>
             </div>
 
             <form className="login-form">
                 <div className="form-group">
                     <label htmlFor="email">Email</label>
-                    <input
+                    <input 
                         type="email"
                         id="email"
                         placeholder="Enter email"
@@ -65,10 +58,13 @@ export default function LoginPage() {
 
                 <div className="form-group">
                     <button type="button" onClick={handleLogin}>Login</button>
-                    <button type="button" onClick={handleSignUp}>Sign Up</button>
                 </div>
 
                 {errorMessage && <p className="error-message">{errorMessage}</p>}
+
+                <p>
+                    Don't have an account? <Link to="/signup">Sign Up</Link>
+                </p>
             </form>
         </section>
     );

@@ -1,58 +1,67 @@
-.login-container {
+.signup-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
-  }
-  
-  .login-header {
+    background-image: url('../../assets/signup.jpeg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; 
+}
+
+.signup-header {
     margin-bottom: 20px;
-  }
-  
-  .login-form {
+    color: #000; 
+    font-size: 20px
+}
+
+.signup-form {
     width: 300px;
     padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     margin-bottom: 15px;
-  }
-  
-  label {
+}
+
+label {
     display: block;
     margin-bottom: 5px;
-  }
-  
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: calc(100% - 20px); 
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-  
-  button {
-    width: 100%;
+    margin-bottom: 10px; 
+}
+
+button {
+    width: calc(100% - 20px); 
     padding: 10px;
     font-size: 16px;
     background-color: #007bff;
-    color: #fff;
+    color: darkgreen;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
-  }
-  
-  button:hover {
+}
+
+button:hover {
     background-color: #0056b3;
-  }
-  
-  .error-message {
+}
+
+.error-message {
     color: red;
     margin-top: 10px;
-  }
-  
+}
