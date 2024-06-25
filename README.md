@@ -32,7 +32,8 @@ The project is currently in its deployment phase and will be available for publi
 
 ## Application Demo
 
-![Uploading image.png…]()
+![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/2f51912d-5f97-4784-b30a-77d32812c3d5)
+
 
 
 
