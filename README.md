@@ -34,12 +34,16 @@ The project is currently in its deployment phase and will be available for publi
 
 - Login page for WikiWanderer:
 ![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/2f51912d-5f97-4784-b30a-77d32812c3d5)
+
 - Home page where you can view your article history and the most popular articles in the world, and navigate to their Wikipedia Pages:
 ![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/71bab61c-b530-4e55-9076-2bc88a4c13de)
+
 - Recommendations page where you can fetch article suggestions based on a query:
 ![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/06a4600b-7968-495e-8f13-698de57d82ce)
+
 - Recommendations based on your individual Wikipedia history (click on desired article):
 ![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/81494d9f-7907-4749-b3a0-79afbe1aaf23)
+
 - Integrated WikiWanderer Chrome Extension which tracks user history and suggests similar articles:
 ![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/40856c19-ff6e-42eb-b428-a28b17415f68)
 
