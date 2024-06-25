@@ -3,6 +3,7 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate, Link } from 'react-router-dom'; 
 import './signup.css'; 
+import logo from './WikiWandererLogoReal2.png'; 
 
 export default function SignUpPage() {
     const navigate = useNavigate(); 
@@ -44,10 +45,10 @@ export default function SignUpPage() {
 
     return (
         <section className="signup-container">
+            <img src={logo} alt="WikiWanderer Logo" className="logo-image-login" />   
             <div className="signup-header">
-                <h1>Create an account</h1>
+            <h1>Create an account</h1>
             </div>
-
             <form className="signup-form">
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
