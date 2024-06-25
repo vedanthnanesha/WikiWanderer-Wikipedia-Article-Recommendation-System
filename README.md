@@ -1,6 +1,6 @@
 # WikiWanderer: A Wikipedia Article Recommendation System
 
-The project spans an interactive website, a chrome extension, and a comprehensive recommendation model. The inspiration was the desire to build a convenient system to allow users to get more insights from Wikipedia for research or casual purposes and help them find more diverse articles in their area of interest.
+The repository spans an interactive website, a chrome extension, and a comprehensive recommendation model, all built from scratch. The inspiration for this project was to create a user-friendly system that enables users to gain deeper insights from Wikipedia, whether for research or casual exploration, and to discover a wider range of articles in their areas of interest. 
 
 ## Development Summary
 
