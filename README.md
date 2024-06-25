@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# WikiWanderer: A Wikipedia Article Recommendation System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project spans an interactive website, a chrome extension, and a comprehensive recommendation model. The inspiration was the desire to build a convenient system to allow users to get more insights from Wikipedia for research or casual purposes and help them find more diverse articles in their area of interest.
 
-## Available Scripts
+## Development Summary
 
-In the project directory, you can run:
+### Key Features
 
-### `npm start`
+- Developed a robust full-stack web application with an integrated chrome extension to recommend similar Wikipedia articles to users based on their recent history, using embedding models.
+- Created a dataset of over 6 million Wikipedia article names and their corresponding high-dimensional vector embeddings using SBERT.
+- Trained a Product Quantization Model to map the embeddings into low-dimensional subspaces using K-Means Clustering, facilitating efficient nearest neighbor search in the recommendation algorithm, and deployed it using FastAPI.
+- Designed a chrome extension which tracks user article history and provides similar article suggestions, and utilized Firebase as the backend service to efficiently store data and authenticate users.
+- Implemented an intuitive user interface with React, integrating with the model to fetch personalized recommendations, displaying user history via Firebase, and global Wikipedia stats through Wikipedia API.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies and Languages Utilized
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Python
+- Natural Language Understanding Model
+- React
+- Javascript
+- Firebase
+- FastAPI
+- CSS
+- Sentence Transformers
+- Product Quantization
 
-### `npm test`
+## Running the React App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+If you wish to run the React app, you can clone the repo, install the required React dependencies, and contact me at [vedanthnanesha04@gmail.com](mailto:vedanthnanesha04@gmail.com) for access to the recommendation model files, which are quite large in size (2.5GB+), and are not included in this repository.
 
-### `npm run build`
+The project is currently in its deployment phase and will be available for public use quite soon.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
