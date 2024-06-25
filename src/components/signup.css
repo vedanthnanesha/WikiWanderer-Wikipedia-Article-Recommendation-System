@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-image: url('../../assets/signup.jpeg'); 
+    background-image: url('../../assets/signup7.jpeg'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@
 }
 
 .signup-header {
-    margin-bottom: 20px;
+    margin-bottom: 0px;
     color: #000; 
     font-size: 20px
 }
@@ -26,7 +26,8 @@
 }
 
 .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
+    align-items: center;
 }
 
 label {
