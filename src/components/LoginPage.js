@@ -3,6 +3,7 @@ import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 import { useNavigate, Link } from 'react-router-dom'; 
 import './LoginPage.css'; 
+import logo from './WikiWandererLogoReal2.png'; 
 
 export default function LoginPage() {
     const navigate = useNavigate(); 
@@ -28,7 +29,7 @@ export default function LoginPage() {
     return (
         <section className="login-container">
             <div className="login-header">
-                <h1>Welcome back to WikiWanderer!</h1>
+                <img src={logo} alt="WikiWanderer Logo" className="logo-image-login" />
             </div>
 
             <form className="login-form">
