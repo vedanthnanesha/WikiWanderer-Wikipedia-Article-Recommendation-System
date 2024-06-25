@@ -30,3 +30,10 @@ If you wish to run the React app, you can clone the repo, install the required R
 
 The project is currently in its deployment phase and will be available for public use quite soon.
 
+## Application Demo
+
+![Uploading image.png…]()
+
+
+
+
