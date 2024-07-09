@@ -45,7 +45,8 @@ The project is currently in its deployment phase and will be available for publi
 ![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/81494d9f-7907-4749-b3a0-79afbe1aaf23)
 
 - Integrated WikiWanderer Chrome Extension which tracks user history and suggests similar articles:
-![image](https://github.com/vedanthnanesha/Wikipedia-Extension/assets/150117424/40856c19-ff6e-42eb-b428-a28b17415f68)
+![image](https://github.com/vedanthnanesha/WikiWanderer-Wikipedia-Article-Recommendation-System/assets/150117424/b6831542-ab1d-4d33-90b1-1537d3258963)
+
 
 
 
