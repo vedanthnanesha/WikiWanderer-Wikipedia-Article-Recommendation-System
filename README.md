@@ -28,8 +28,6 @@ The repository spans an interactive website, a chrome extension, and a comprehen
 
 If you wish to run the React app, you can clone the repo, install the required React dependencies, and contact me at [vedanthnanesha04@gmail.com](mailto:vedanthnanesha04@gmail.com) for access to the recommendation model files, which are quite large in size (2.5GB+), and are not included in this repository.
 
-The project is currently in its deployment phase and will be available for public use soon.
-
 ## Application Demo
 
 - Login page for WikiWanderer:
